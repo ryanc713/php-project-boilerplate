@@ -1,0 +1,78 @@
+:root {
+    --main-font-family: "";
+    --heading-font-family: "";
+    --heading-font-weight: "";
+    --body-bg-color: "";
+    --primary-color: "";
+    --secondary-color: "";
+    --link-color: "";
+    --link-hover-color: "";
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--main-font-family);
+    background-color: var(--body-bg-color);
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* ------------------------------ */
+/*          Navbar                */
+/* ------------------------------ */
+
+.nav-underline {
+    position: relative;
+}
+
+.nav-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-underline:hover::after,
+.nav-underline.active::after {
+    width: 100%;
+}
+
+/* ------------------------------ */
+/*          Typography            */
+/* ------------------------------ */
+
+p {
+    font-family: var(--main-font-family);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font-family);
+    font-weight: var(--heading-font-weight);
+}
+
+/* ------------------------------ */
+/*        Links & Buttons         */
+/* ------------------------------ */
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
